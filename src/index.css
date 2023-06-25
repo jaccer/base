@@ -4,16 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #1e1a20;
+}
+
 html, body {
   width: 100%;
   height: 100%;
 }
 
-#renderCanvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: red;
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
 }
 
 #root {
