@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 /**
  * Renderer
  */
-const canvas = document.querySelector('canvas.webgl') as HTMLCanvasElement
+const canvas = document.querySelector<HTMLCanvasElement>('canvas.webgl') || undefined
 
 const renderer = new THREE.WebGLRenderer({
   antialias: true,
@@ -30,7 +30,7 @@ camera.position.z = 10
  * Controls
  */
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableDamping = true
+// controls.enableDamping = true
 
 /**
  * Lights
@@ -85,3 +85,10 @@ window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight
   camera.updateProjectionMatrix()
 })
+
+/**
+ * External functions
+ */
+export const moveUp = () => {
+  box.position.y += 1
+}

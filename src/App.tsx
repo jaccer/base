@@ -1,8 +1,14 @@
+import { moveUp } from "./three"
+
 function App() {
 
   return (
     <div>
-      {/* USER INTERFACE */}
+      <button onClick={() => {
+        moveUp()
+      }}>
+        MOVE UP
+      </button>
     </div>
   )
 }
